@@ -1,14 +1,18 @@
+#main-container{
+ width: 100%;   
+}
 .progress-bar{
     background: red;
-    width: 100px;
-    height: 20px;
+    width: 100%;
+    height: 50px;
     border-radius: 60px ;
 }
 
 .progress-bar-complete{
     background: slateblue;
-    width: 60px;
+    width: 66%;
     height: 100%;
     border-radius: 60px ;
 
 }
+/* dont forget to animate */
