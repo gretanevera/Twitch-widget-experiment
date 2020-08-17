@@ -1,0 +1,14 @@
+.progress-bar{
+    background: red;
+    width: 100px;
+    height: 20px;
+    border-radius: 60px ;
+}
+
+.progress-bar-complete{
+    background: slateblue;
+    width: 60px;
+    height: 100%;
+    border-radius: 60px ;
+
+}
