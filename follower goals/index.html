@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>follower alert test</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
 
-        <div id="main-container">
-            <div class="progress-bar">
-                <!-- to do -->
-                <!-- make a text for current followers   make text for goal and maybe some extra -->
-                <span id="goal-number">100</span>
-                <div id="progress-bar-complete"> 
-                      
-                       <span class="achieved-number">50</span>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>follower alert test</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> </head>
 
-            </div>
-
+<body>
+    <div id="main-container">
+        <div class="progress-bar">
+            <span id="goal-number"></span>
+            <div id="progress-bar-complete"> <span id="achieved-number"></span> </div>
         </div>
-        <input oninput="currentChanged()" id="currentProg" type="number">
-        <script src="scripts.js"></script>
+    </div> <input oninput="currentChanged()" id="currentProg" type="number" min="0" value="150">
 
-    </body>
+    <input id="goal" type="number" min="0" value="200" placeholder="goals" oninput="onGoalChange()">
+
+    <input id="starter-followers" type="number" min="0" value="100" placeholder="starter followers">
+
+    <script src="scripts.js"></script>
+</body>
+
 </html>
