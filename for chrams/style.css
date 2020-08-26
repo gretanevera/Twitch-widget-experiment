@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 #latest{
@@ -44,3 +45,51 @@ text-shadow:
 body{
     background-color: black;
 }
+=======
+
+
+#latest{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     font-family:'Courier New', Courier, monospace;/*font style*/
+     color: white; /*font color*/
+     transition-delay: 1s;
+     transition: opacity 1s; 
+    
+}
+#poof{
+display: flex;
+justify-content: center;
+align-items: center;
+color: ivory;
+letter-spacing: 5px;
+font-weight: 900;
+font-size: 40px;
+font-family: 'Bangers', cursive;
+font-style: oblique;
+position: absolute;
+top:5px;
+left: 0;
+width: 100%;
+height: 50px;
+opacity: 0;
+z-index: 2;
+text-shadow:
+       4px 4px 0 #000,
+     -2px -2px 0 #000,  
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+       2px 2px 0 #000;
+       
+       transition: opacity 1s; 
+}
+
+
+/* just for the eye comfort */
+body{
+    background-color: black;
+}
+>>>>>>> 4309725fe8518f5c65554268480f36702fea7d64
