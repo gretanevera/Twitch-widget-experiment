@@ -49,6 +49,17 @@
     right: 1px;
     position: absolute;
 }
+#goal-details{
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    width: auto;
+    display: inline-flex;
+    float: right;
+    margin-right: 10%;
+}
 
-
-/* @media when progress bar reaches a certain length change change how border radzius is calculated  */
+#goal-detail-count{
+    font-weight: bolder;
+}
