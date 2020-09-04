@@ -10,7 +10,7 @@ let goalDetails = {
         "goal":50
     },
     2: {
-         "name": "The game you want to play",
+        "name": "The game you want to play",
         "startingPoint": 50,
         "goal":100
     },
