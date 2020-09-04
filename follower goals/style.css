@@ -1,5 +1,6 @@
 #main-container {
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .progress-bar {
@@ -62,4 +63,9 @@
 
 #goal-detail-count{
     font-weight: bolder;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+#goal-name {
+    padding-right: 3px;
 }
