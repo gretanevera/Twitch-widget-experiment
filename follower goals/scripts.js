@@ -10,7 +10,7 @@ let goalDetails = {
         "goal":50
     },
     2: {
-        "name": "The game you want to play",
+         "name": "The game you want to play",
         "startingPoint": 50,
         "goal":100
     },
@@ -32,7 +32,7 @@ let goalDetails = {
 }
 
 
-document.getElementById("achieved-number").textContent = currentFollows;
+// document.getElementById("achieved-number").textContent = currentFollows;
 document.getElementById("goal-number").textContent = currentGoal;
 document.getElementById("progress-bar-complete").style.width = currentProgress + "%";
 
@@ -53,6 +53,7 @@ function currentChanged() {
     let onePercent = (finalGoal - starterFollowerCount) / 100;
     let vals = parseInt(document.getElementById('currentProg').value);
     let barProgress = (vals - starterFollowerCount) / onePercent;
+    document.getElementById("achieved-number").textContent = vals;
 
     if (barProgress < 100) {
         document.getElementById("progress-bar-complete").style.width = barProgress + "%";
