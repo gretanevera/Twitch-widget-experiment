@@ -41,44 +41,60 @@ function levelChecker() {
     
     currentFollows = parseInt(document.getElementById('currentProg').value);
       
-    if (currentFollows >= goalDetails[1].startingPoint && currentFollows < goalDetails[1].goal-1) {
-        document.getElementById("current-level").
-        textContent = goalDetails[1].level; 
-        currentGoal = goalDetails[1].goal;
-        document.getElementById("goal-number").textContent = currentGoal;
-        starterFollowerCount = goalDetails[1].startingPoint;
-        document.getElementById("goal-name").textContent = goalDetails[1].name;
-    
-
-    } else if (currentFollows >= goalDetails[2].startingPoint && currentFollows < goalDetails[2].goal-1) {
-        document.getElementById("current-level").
-        textContent = goalDetails[2].level; 
-        currentGoal = goalDetails[2].goal;
-        document.getElementById("goal-number").textContent = currentGoal;
-        starterFollowerCount = goalDetails[2].startingPoint;
-        document.getElementById("goal-name").textContent = goalDetails[2].name;
-    } else if (currentFollows >= goalDetails[3].startingPoint && currentFollows < goalDetails[3].goal-1) {
-        document.getElementById("current-level").
-        textContent = goalDetails[3].level; 
-        currentGoal = goalDetails[3].goal;
-        document.getElementById("goal-number").textContent = currentGoal;
-        starterFollowerCount = goalDetails[3].startingPoint;
-        document.getElementById("goal-name").textContent = goalDetails[3].name;
-    } else if (currentFollows >= goalDetails[4].startingPoint && currentFollows < goalDetails[4].goal-1) {
-        document.getElementById("current-level").
-        textContent = goalDetails[4].level; 
-        currentGoal = goalDetails[4].goal;
-        document.getElementById("goal-number").textContent = currentGoal;
-        starterFollowerCount = goalDetails[4].startingPoint;
-        document.getElementById("goal-name").textContent = goalDetails[4].name;
-    } else if (currentFollows >= goalDetails[5].startingPoint && currentFollows < goalDetails[5].goal-1) {
+    if (currentFollows >= goalDetails[5].startingPoint && currentFollows <= goalDetails[5].goal) {
         document.getElementById("current-level").
         textContent = goalDetails[5].level; 
         currentGoal = goalDetails[5].goal;
         document.getElementById("goal-number").textContent = currentGoal;
         starterFollowerCount = goalDetails[5].startingPoint;
         document.getElementById("goal-name").textContent = goalDetails[5].name;
-    } else {
+        currentChanged();
+    }
+         
+    else if (currentFollows >= goalDetails[4].startingPoint && currentFollows <= goalDetails[4].goal) {
+        document.getElementById("current-level").
+        textContent = goalDetails[4].level; 
+        currentGoal = goalDetails[4].goal;
+        document.getElementById("goal-number").textContent = currentGoal;
+        starterFollowerCount = goalDetails[4].startingPoint;
+        document.getElementById("goal-name").textContent = goalDetails[4].name;
+        currentChanged();
+     
+    }
+        else if (currentFollows >= goalDetails[3].startingPoint && currentFollows <= goalDetails[3].goal) {
+        document.getElementById("current-level").
+        textContent = goalDetails[3].level; 
+        currentGoal = goalDetails[3].goal;
+        document.getElementById("goal-number").textContent = currentGoal;
+        starterFollowerCount = goalDetails[3].startingPoint;
+        document.getElementById("goal-name").textContent = goalDetails[3].name;
+        currentChanged();
+    }  else if (currentFollows >= goalDetails[2].startingPoint && currentFollows <= goalDetails[2].goal) {
+        document.getElementById("current-level").
+        textContent = goalDetails[2].level; 
+        currentGoal = goalDetails[2].goal;
+        document.getElementById("goal-number").textContent = currentGoal;
+        starterFollowerCount = goalDetails[2].startingPoint;
+        document.getElementById("goal-name").textContent = goalDetails[2].name;
+        currentChanged();
+    }
+    
+    
+    
+    else if (currentFollows >= goalDetails[1].startingPoint && currentFollows < goalDetails[1].goal) {
+        document.getElementById("current-level").
+        textContent = goalDetails[1].level; 
+        currentGoal = goalDetails[1].goal;
+        document.getElementById("goal-number").textContent = currentGoal;
+        starterFollowerCount = goalDetails[1].startingPoint;
+        document.getElementById("goal-name").textContent = goalDetails[1].name;
+        currentChanged();
+    
+
+    }
+    
+    
+    else {
         console.log("nothing changed");
 
     }
@@ -94,28 +110,15 @@ function currentChanged() {
     let vals = parseInt(document.getElementById('currentProg').value);//changed in the production
     let barProgress = (vals - starterFollowerCount) / onePercent;
     document.getElementById("achieved-number").textContent = vals;
-    levelChecker();
+   
 
    
-    if (barProgress < 100) {
-        document.getElementById("progress-bar-complete").style.width = barProgress + "%";
-    } else if (barProgress >= 100) {
-        goalReached();
+    if (barProgress < 100 && barProgress>0) {
+       document.getElementById("progress-bar-complete").style.width = barProgress + "%";
+    } else if (barProgress >= 100 || parseInt(barProgress) < -0 ) {
+       levelChecker();
         
     }
 
 }
 
-function onGoalChange() {
-    let vals = parseInt(document.getElementById('goal').value);
-    document.getElementById("goal-number").textContent = vals;
-    currentChanged();
-}
-
-function goalReached() {;
-    // to do :
-    // make that when it reaches one 100 percent the goal becomes minimum value.
-    // count percentage from that minimum
-    // poof its done
-    // call levelChecker
-}
